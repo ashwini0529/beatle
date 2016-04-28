@@ -36,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     {
                         String username = txt1.getText().toString();
                         String password = txt2.getText().toString();
-                        if(username.equals("swag")&&password.equals("londa")){
+                        if(username.equals("swag")&&password.equals("londa")) {
                             Toast.makeText(MainActivity.this,
                                     "Login Successful", Toast.LENGTH_LONG).show();
-                            flag=1;
                             startActivity(new Intent(MainActivity.this, Main2Activity.class));
                         }
                         else{
