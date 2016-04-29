@@ -35,6 +35,7 @@
         android:layout_below="@+id/searchButton"
         android:layout_marginTop="20dp"
         android:text="Click to see listView"
+        android:id="@+id/listView"
         />
 
 

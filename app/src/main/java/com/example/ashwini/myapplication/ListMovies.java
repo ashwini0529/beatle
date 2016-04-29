@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 
 
 public class ListMovies extends AppCompatActivity {
-    String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry","WebOS","Ubuntu","Windows7","Max OS X"};
+    String[] mobileArray = {"Android","iPhone","WindowsMobile","Blackberry","WebOS","Ubuntu","Windows7","Max OS X"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

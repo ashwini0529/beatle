@@ -13,14 +13,38 @@ public class Search extends AppCompatActivity {
 
     Button search;
     EditText searchText;
+    Button listView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         search = (Button)findViewById(R.id.searchButton);
         searchText = (EditText)findViewById(R.id.searchBar);
-
+        listView = (Button)findViewById(R.id.listView);
         search.setOnClickListener(
+                new View.OnClickListener()
+                {
+                    public void onClick(View view)
+                    {
+
+                        Toast.makeText(Search.this,
+                               "This is your search activity..", Toast.LENGTH_LONG).show();
+
+
+                        Intent i = new Intent(Search.this,parse.class);
+                       // startActivity(new Intent(Search.this,parse.class)
+                        String passMessage = "I passed this message to another activity.";
+                        Bundle bundle = new Bundle();//Create a new bundle..
+                        bundle.putString("message",passMessage);
+                        i.putExtras(bundle);
+                        startActivity(i);
+
+
+                    }
+                }
+        );
+
+        listView.setOnClickListener(
                 new View.OnClickListener()
                 {
                     public void onClick(View view)
@@ -29,7 +53,11 @@ public class Search extends AppCompatActivity {
                         baseUrl=baseUrl.concat(searchText.getText().toString());
                         Toast.makeText(Search.this,
                                 baseUrl, Toast.LENGTH_LONG).show();
-                        startActivity(new Intent(Search.this, ListMovies.class));
+
+
+                        startActivity(new Intent(Search.this, ListMovies.class)
+
+                         );
                     }
                 }
         );

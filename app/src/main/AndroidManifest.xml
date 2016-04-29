@@ -33,7 +33,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Search" />
-        <activity android:name=".ListMovies"></activity>
+        <activity android:name=".ListMovies" />
+        <activity android:name=".ShowJson" />
+        <activity android:name=".parse"></activity>
     </application>
 
 </manifest>
