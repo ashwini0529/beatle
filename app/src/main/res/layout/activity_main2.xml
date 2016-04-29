@@ -21,13 +21,13 @@
         android:textColor="#ffffff"
         />
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/welcome"
-        android:layout_marginTop="35dp"
-        android:text="Logout"
-        android:background="#FFFFFF"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/logout"
         android:textSize="25dp"
         android:id="@+id/logout"
-        />
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

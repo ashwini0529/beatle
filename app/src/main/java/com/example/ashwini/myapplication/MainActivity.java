@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button btn;
+    Button imdb;
     EditText txt1;
     EditText txt2;
     int flag =0;
@@ -29,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button)findViewById(R.id.button);
         txt1 = (EditText)findViewById(R.id.text1);
         txt2 = (EditText)findViewById(R.id.text2);
+        imdb = (Button)findViewById(R.id.imdbButton);
+
+        //If IMDB button is clicked....
+        imdb.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(MainActivity.this, Search.class));
+                    }
+                }
+        );
+
+
         btn.setOnClickListener(
                 new View.OnClickListener()
                 {
