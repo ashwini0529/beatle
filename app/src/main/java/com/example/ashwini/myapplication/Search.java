@@ -1,5 +1,6 @@
 package com.example.ashwini.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,7 @@ public class Search extends AppCompatActivity {
                         baseUrl=baseUrl.concat(searchText.getText().toString());
                         Toast.makeText(Search.this,
                                 baseUrl, Toast.LENGTH_LONG).show();
+                        startActivity(new Intent(Search.this, ListMovies.class));
                     }
                 }
         );
